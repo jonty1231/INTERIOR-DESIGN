@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --pcolor:#3A3F58;
+}
+
+.section1{
+    height: 100vh;
+}
+.section1 img{
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg_s{
+    background: #484b5ec9;
+}
+
+.section1 div button{
+    background: white;
+    color: black;
+    width: 25%;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.section1 div button:hover{
+color: white;
+background: transparent;
+border: 1px solid white;
+}
+
+
+.about_section button{
+border: 1px solid transparent;
+font-size: 1em;
+background: var(--pcolor);
+color: white;
+padding: 2px 12px;
+/* border-radius: 10px; */
+transition: all 0.5s;
+}
+.about_section button:hover{
+    background: transparent;
+    color: var(--pcolor);
+    border: 1px solid var(--pcolor);
+}
+
+.about_section{
+    font-size: 20px;
+}
+.gallery_section div{
+    position: relative;
+}
+.gallery_section div::before{
+content: "";
+position: absolute;
+height: 0%;
+width: 100%;
+bottom: 0;
+left: 0;
+background: var(--pcolor);
+opacity: 0.7;
+transition: all 0.2s;
+
+}
+.gallery_section div:hover::before{
+    height: 100%;
+}
+
+.gallery_section div:hover i{
+    opacity: 1;
+ 
+}
+
+.gallery_section div i{
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background: #E45441;
+    border-radius: 50%;
+    padding: 16px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.buttons{
+    border: 1px solid transparent;
+    font-size: 1em;
+    background: #E45441;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    }
+    .buttons:hover{
+        background: transparent;
+        color: #E45441;
+        border: 1px solid #E45441;
+    }
+
+.services_section1 div{
+background: var(--pcolor);
+height: 100%;
+
+padding: 15vh 0px 20px 0px;
+color: white;
+/* padding: 20px 10px; */
+}
+.services_section1 img{
+    left: 50%;
+    transform: translate( -50%,0px);
+    top: -30%;
+    border: 4px solid white;
+    width: 45%;
+}
+.blog-section1 div {
+    background: #F9F8F7;
+    color: var(--pcolor);
+}
+
+.button2{
+    background: var(--pcolor);
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    color: white;
+    transition: all 0.5s;
+}
+.button2:hover{
+background: transparent;
+color: var(--pcolor);
+border: 1px solid var(--pcolor);
+}
+.testimonial_section1{
+    background: var(--pcolor);
+   
+    min-width: 60%;
+    max-width: 95%;
+    min-height: 15rem;
+    
+}
+.testimonial_section1 div b{
+    color: #E45441;
+}
+
+
+.testimonial_section1 img{
+    width: 18%;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: -30%;
+    left: 2%;
+   
+}
+.form_section{
+    background: var(--pcolor);
+    padding: 20px;
+    border: 5px solid white;
+    width: 30%;
+}
+.form_section2{
+    /* background: var(--pcolor); */
+    padding: 20px;
+    /* border: 4px solid white; */
+    width: 40%;
+}
+.form_section input, .form_section2 input{
+    width: 100%;
+    margin:  10px 0px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #3a3f58b7;
+}
+.form_section button{
+    margin: 10px 0px;
+}
+.form_section textarea{
+    width: 100%;
+    margin:  10px 0px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #3a3f58b7;
+}
+
+footer{
+    background: var(--pcolor);
+    color: white;
+    padding-top: 5rem ;
+    position: relative;
+    top: -60px;
+    z-index: -1;
+    padding-bottom: 1rem;
+
+}
+
+.z_i{
+    z-index: 999;
+}
+.nav_icon{
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    background: white;
+    color: black;
+    padding: 14px 15px;
+    border-radius: 50%;
+    cursor: grab;
+    z-index: 999;
+}
+nav{
+    position: fixed;
+    z-index: 10;
+    /* opacity: 0; */
+    background: #3a3f58fa;;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    transition: all 0.5s;
+}
+
+
+.nav_show{
+    left: 0;
+}
+.nav_ul li{
+list-style: none;
+}
+.nav_ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media (max-width:550px) {
+
+    .section1 div button{
+        width: 55%;
+        
+    }
+    .about_section{
+        font-size: 20px;
+    }
+    
+    .testimonial_section1 img{
+        width: 40%;
+        border: 5px solid white;
+        border-radius: 50%;
+        top: -30%;
+        left: 28%;
+       
+    }
+    .form_section{
+        background: var(--pcolor);
+        padding: 20px;
+        border: 5px solid white;
+        width: 100%;
+        order: 2;
+    }
+    .form_section2{
+        /* background: var(--pcolor); */
+        /* padding: 20px; */
+        /* border: 4px solid white; */
+        width: 100%;
+        order: 1;
+    }
+}
